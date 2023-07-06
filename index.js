@@ -57,7 +57,7 @@ let functionGreeting = (a, b) => {
 
 //8. Write a function that takes two parameters, firstName and lastName, and returns a full name. The full name should be the first and the last name separated by a space.
 let createFullName = (firstName, lastName) => `${firstName} ${lastName}`;
-console.log("My full name is " + createFullName('Marnilyn','Ramirez'));
+console.log("8. My full name is " + createFullName('Marnilyn','Ramirez'));
 
 //9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
 function GreaterThan(result){
@@ -83,18 +83,48 @@ function average2(array) {
     
 //11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
 
-function higherAverage(array1, array2) {
-       sum = 0;
-    array.forEach((element) => {
-      sum += element;
-    });
-    return sum / array1.length;
-    return sum / array2.length;
-   
+let array1 = [10,20,40,60];
+let array2 = [43,20,10,50];
+
+function arrayAverage(array) {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
   }
-  console.log("11. : " + higherAverage([10,20,35,41,65], [5,37,45,82]))
-  
+  return sum / array.length;
+}
+let averageArray1 = arrayAverage(array1);
+let averageArray2 = arrayAverage(array2);
+
+if (averageArray1 > averageArray2) {
+  console.log("11. Is Array 1 greater than Array 2?: " + true)
+} else {console.log("11. Is Array 1 greater than Array 2?: " + false)
+}
+
+
+ 
 
 //12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 
+var isHotOutside = true
+var moneyInPocket = 11.00
+
+function willBuyDrink(isHotOutside){
+  
+  if (moneyInPocket > 10.50 && isHotOutside) {
+    return true
+}else {return false}
+}
+
+console.log("12. Is it hot outside and money in pocket greater than 10.50?: " + willBuyDrink(isHotOutside))
+
 //13. Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
+
+var customerName = "Marnilyn Ramirez"
+
+function greet(name) {
+  console.log(`13. Hello, ${name}!`);
+}
+
+greet(customerName); 
+// greeting function. I created this function to show the greeting for a variable name string.
